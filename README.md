@@ -12,6 +12,26 @@
 *   **核心功能**：精确地将图片或 PDF 中包含中文文本与数学公式的混合排版完整翻译为标准的 LaTeX 格式代码。
 *   **特性**：强制英文提示以最大化指令遵循度；内置了强硬的防偏离机制以屏蔽大模型的寒暄式回答；具备面向多模态混合输入的鲁棒性处理设计。
 
+## 如何使用 (How to Use)
+
+本项目兼容 [vercel-labs/skills](https://github.com/vercel-labs/skills) 标准规范。你可以通过 `skills` CLI 工具快速将这些高级技能集成到你的 Agent 或工作流中。
+
+### 1. 添加技能
+运行以下命令来安装本项目中的特定技能（请将 `<YOUR_GITHUB_ID>` 替换为你的真实 ID）：
+
+```bash
+# 格式：npx skill add <Repository_URL>/<Skill_Subdirectory>
+npx skill add https://github.com/ross/skills-matnoble/ocr-latex
+```
+
+### 2. 更新技能
+若要同步本仓库的最新优化逻辑：
+
+```bash
+# 进入你的 agent 目录执行更新
+npx skill update ocr-latex
+```
+
 ## 适用场景
 
 *   多 Agent 协同流水的管道节点 (Pipeline Node)。
