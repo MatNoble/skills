@@ -32,6 +32,9 @@ npx skill add https://github.com/ross/skills-matnoble/ocr-latex
 npx skill update ocr-latex
 ```
 
+> [!TIP]
+> **从旧版本迁移**：如果你之前是以 `ocr_latex_generator` 名字安装的，请重新运行一次 `npx skill add` 命令以获取最新的命名空间支持。
+
 ## 适用场景
 
 *   多 Agent 协同流水的管道节点 (Pipeline Node)。

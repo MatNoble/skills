@@ -1,5 +1,5 @@
 ---
-name: ocr_latex_generator
+name: ocr-latex
 description: Precise OCR tool for converting images and PDF files containing math formulas, tables, and text (primarily Chinese) into strictly formatted LaTeX code.
 ---
 
