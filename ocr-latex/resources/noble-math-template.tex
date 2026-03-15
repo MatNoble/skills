@@ -1,0 +1,62 @@
+\documentclass{article}
+
+% ==========================================
+% 0. 中文支持与底层设置 (必须在最前面)
+% ==========================================
+\usepackage[UTF8, fontset=fandol]{ctex}
+\usepackage{fontspec}
+
+% ==========================================
+% 1. 页面与排版设置
+% ==========================================
+\usepackage[top=2cm, bottom=2.5cm, left=2cm, right=2cm]{geometry} 
+\usepackage{setspace}
+\setstretch{1.4}
+
+% ==========================================
+% 2. 颜色与列表精细控制
+% ==========================================
+\usepackage[table]{xcolor}
+\definecolor{AnswerRed}{RGB}{200, 30, 30}
+% 颜色与高亮宏：最基础的颜色替换，去除绑定加粗以防止外加环境中解析崩溃
+\newcommand{\ans}[1]{\textcolor{AnswerRed}{#1}}
+
+\usepackage{enumitem}
+\setlist{nosep} % 全局去除多余列表间距
+\setlist[enumerate,1]{label=\arabic*., leftmargin=*, itemsep=1em, topsep=1em}
+\setlist[itemize,1]{itemsep=0.5em, topsep=0.5em}
+
+% ==========================================
+% 3. 数学公式与字体设置
+% ==========================================
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{newtxtext, newtxmath} % 替代 mathdesign 消除旧字体警告
+
+\allowdisplaybreaks[4]
+\numberwithin{equation}{section}
+
+% 定理环境设置
+\renewcommand{\proofname}{\textbf{解}}
+\newenvironment{solution}{\begin{proof}}{\end{proof}}
+
+% 自定义数学宏（严格遵循规范）
+\newcommand*{\dif}{\ensuremath{\mathop{}\!\mathrm{d}}}
+\newcommand{\mat}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\vect}[1]{\ensuremath{\boldsymbol{#1}}}
+\newcommand{\trans}{\ensuremath{^\mathsf{T}}}
+
+% ==========================================
+% 4. 字体设置 (强制指定本地思源字体系列)
+% ==========================================
+\punctstyle{kaiming}
+
+% ==========================================
+% 5. 交互式 PDF 导航 (必须置于最后)
+% ==========================================
+\usepackage[colorlinks,linkcolor=AnswerRed,urlcolor=AnswerRed,bookmarksopen=true]{hyperref}
+
+\begin{document}
+
+\end{document}
