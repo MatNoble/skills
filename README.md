@@ -17,11 +17,11 @@
 本项目兼容 [vercel-labs/skills](https://github.com/vercel-labs/skills) 标准规范。你可以通过 `skills` CLI 工具快速将这些高级技能集成到你的 Agent 或工作流中。
 
 ### 1. 添加技能
-运行以下命令来安装本项目中的特定技能（请将 `<YOUR_GITHUB_ID>` 替换为你的真实 ID）：
+运行以下命令来安装本项目中的特定技能：
 
 ```bash
-# 格式：npx skill add <Repository_URL>/<Skill_Subdirectory>
-npx skill add https://github.com/ross/skills-matnoble/ocr-latex
+# 格式：npx skills add <GitHub_Subdirectory_URL>
+npx skills add https://github.com/MatNoble/skills/tree/main/ocr-latex
 ```
 
 ### 2. 更新技能
@@ -29,7 +29,7 @@ npx skill add https://github.com/ross/skills-matnoble/ocr-latex
 
 ```bash
 # 进入你的 agent 目录执行更新
-npx skill update ocr-latex
+npx skills update ocr-latex
 ```
 
 > [!TIP]
